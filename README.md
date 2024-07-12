@@ -1,4 +1,4 @@
-# fraud_detection_supervised_learning
+# Fraud Detection with Supervised Learning (Logistic Regression, XGBoost, Neural Network)
 This contains python codes to utilise several supervised machine learning algorithm to identify fraudulent transactions from a dataset with 284,807 European credit card transactions with 492 fraudulent transactions that occurred over two days in September 2013. The dataset is obtained from Kaggle, see more from https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud.
 
 Due to the imbalanced class in the dataset, Synthetic Minority Over-sampling Technique (SMOTE) has been applied to oversample the minority class in our dataset. And then, I have trained Logistic Regression, XGBoost, and Neural Network to predict fraudulent transactions. 
