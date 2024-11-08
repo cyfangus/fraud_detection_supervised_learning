@@ -5,6 +5,6 @@ By replicating the steps from the study, it sought to demonstrate my relevant sk
 
 Varmedja, Dejan, et al. "Credit card fraud detection-machine learning methods." 2019 18th International Symposium INFOTEH-JAHORINA (INFOTEH). IEEE, 2019.
 
-![image](https://github.com/user-attachments/assets/0fb3ba28-5697-4f7d-a2cf-9b02e950e0e5)
-
 For more details, please refer to the [notebook](https://github.com/cyfangus/fraud_detection_supervised_learning/blob/main/fraud_detection_supervised_learning.ipynb).
+
+![output](https://github.com/user-attachments/assets/0114c055-37ae-4532-89fc-a8eb2513c833)
