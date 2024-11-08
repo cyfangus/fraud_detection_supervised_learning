@@ -8,4 +8,4 @@ Varmedja, Dejan, et al. "Credit card fraud detection-machine learning methods." 
 ![image](https://github.com/user-attachments/assets/f2b56ba1-974f-493f-8f3c-afdaddd3f7b5)
 
 
-For more details, please refer to the (notebook)[https://github.com/cyfangus/fraud_detection_supervised_learning/blob/main/fraud_detection_supervised_learning.ipynb]
+For more details, please refer to the [notebook](https://github.com/cyfangus/fraud_detection_supervised_learning/blob/main/fraud_detection_supervised_learning.ipynb).
