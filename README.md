@@ -1,10 +1,11 @@
-# Fraud Detection with Supervised Learning (Logistic Regression, XGBoost, Neural Network)
-This contains python codes to utilise several supervised machine learning algorithm to identify fraudulent transactions from a dataset with 284,807 European credit card transactions with 492 fraudulent transactions that occurred over two days in September 2013. The dataset is obtained from Kaggle, see more from https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud.
+# Fraud Detection with Supervised Learning with SMOTE (Synthetic Minority Oversampling Technique)
+This is a walk through on the following research paper analyzing various machinelearning algorithms, such as Logistic Regression (LR), Random Forest (RF), Naïve Bayes (NB) and Multilayer Perceptron (MLP) in order to determine which algorithm is most suitable for credit card fraud detection. 
 
-Due to the imbalanced class in the dataset, Synthetic Minority Over-sampling Technique (SMOTE) has been applied to oversample the minority class in our dataset. And then, I have trained Logistic Regression, XGBoost, and Neural Network to predict fraudulent transactions. 
+By replicating the steps from the study, it sought to demonstrate my relevant skills and knowledge on solving the problem. The dataset is enclosed as 'creditcard.csv', which is a [Kaggle dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) containing 284,807 European credit card transactions with 492 fraudulent transactions that occurred over two days in September 2013. 
 
-Without much fine tuning and preprocessing, the results show that XGBoost had the best performance among the models, with Accuracy: 0.9994, Precision: 0.8019, Recall: 0.8673, F1 score: 0.8333. It performs the best in terms of recall and F1 score, which are often more important matrics in the context of fruad detection.
+Varmedja, Dejan, et al. "Credit card fraud detection-machine learning methods." 2019 18th International Symposium INFOTEH-JAHORINA (INFOTEH). IEEE, 2019.
 
-<img width="669" alt="Screenshot 2024-07-12 at 11 56 14" src="https://github.com/user-attachments/assets/7a2e8184-bcfd-4614-9229-728e16c452fc">
+![image](https://github.com/user-attachments/assets/f2b56ba1-974f-493f-8f3c-afdaddd3f7b5)
 
-<img width="707" alt="Screenshot 2024-07-12 at 11 56 43" src="https://github.com/user-attachments/assets/8ae773af-616a-4617-89e2-66efcae70675">
+
+For more details, please refer to the (notebook)[https://github.com/cyfangus/fraud_detection_supervised_learning/blob/main/fraud_detection_supervised_learning.ipynb]
