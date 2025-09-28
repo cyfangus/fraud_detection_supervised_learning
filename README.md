@@ -8,7 +8,7 @@ Referencing Varmedja, Dejan, et al. "Credit card fraud detection-machine learnin
 [Kaggle European credit card transactions](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud), anonymized for privacy. Highly imbalanced (284,807 transactions; 492 fraud).
 
 ## Key Results
-- *Best model: Random Forest (Resampled with SMOTE)* (scoring F1 = 0.8705, Precision = 0.8842, Recall = 0.8571, and Accuracy = 0.9996.
+- [b]Best model: Random Forest (Resampled with SMOTE)[/b] (scoring F1 = 0.8705, Precision = 0.8842, Recall = 0.8571, and Accuracy = 0.9996.
   This model provides the strongest balance between correctly identifying fraud and minimizing false positives, outperforming other tested approaches in this highly imbalanced dataset.)
 - Feature importance: [Top drivers]
 - ROC AUC: [Value]; PR AUC: [Value]
