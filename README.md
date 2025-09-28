@@ -10,11 +10,12 @@ Referencing Varmedja, Dejan, et al. "Credit card fraud detection-machine learnin
 ## Key Results
 - **Best model: Random Forest (Resampled with SMOTE)** (scoring F1 = 0.8705, Precision = 0.8842, Recall = 0.8571, and Accuracy = 0.9996.
   This model provides the strongest balance between correctly identifying fraud and minimizing false positives, outperforming other tested approaches in this highly imbalanced dataset.)
-- Feature importance: [Top drivers]
-- ROC AUC: [Value]; PR AUC: [Value]
+- Feature importance analysis revealed that several principal components, including V17, V14, and V12, were the most influential predictors, although individual features are anonymized due to PCA transformation.
+- The model achieved a high accuracy of 99.96%, while ROC AUC and PR AUC metrics demonstrate strong discriminatory power in identifying fraudulent transactions in this highly imbalanced dataset.
+- Feature engineering proactively removed redundant and low-importance features, reducing the data to 20 key components without impacting model performance, improving training efficiency and model clarity.
 
 ## Business Impact
-Emphasizes cost savings, risk compliance, and importance of recall over accuracy for operational fraud detection.
+By employing SMOTE to effectively balance highly imbalanced fraud datasets, this project demonstrates that traditional machine learning models such as Random Forest can achieve fraud detection performance comparable to complex deep learning models like neural networks. For financial institutions and insurers, this represents a cost-saving advantage by reducing the need for expensive computational infrastructure, lengthy model tuning, and specialized skillsets required for neural networks. These efficiencies accelerate deployment timelines and reduce operational overhead while maintaining robust detection accuracy, ultimately helping organizations minimize fraud losses, optimize investigation workflows, and comply with stringent regulatory standards more efficiently.
 
 ## Next Steps
 - Try insurance/open banking datasets
