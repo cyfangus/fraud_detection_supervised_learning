@@ -1,28 +1,82 @@
-# Credit Card Fraud Detection – Supervised Learning (Portfolio Project)
+# Fraud Detection with Supervised Learning: SMOTE and Synthetic Data
 
-## Project Summary
-Detecting costly credit card fraud using supervised machine learning (Logistic Regression, Random Forest, Naïve Bayes, MLP) and SMOTE for class imbalance. Results benchmarked against published peer-reviewed study. Clear business context, actionable results, and model interpretability highlighted. 
-Referencing Varmedja, Dejan, et al. "Credit card fraud detection-machine learning methods." 2019 18th International Symposium INFOTEH-JAHORINA (INFOTEH). IEEE, 2019. [see here](https://github.com/cyfangus/fraud_detection_supervised_learning/blob/main/Credit_Card_Fraud_Detection_-_Machine_Learning_methods.pdf)
+## Overview
+
+This project investigates whether **traditional machine learning algorithms** enhanced with **data augmentation** (SMOTE and generative synthetic data via SDV) can rival deeper models for fraud detection. It focuses on:
+
+- **Imbalanced classification:** Real-world credit card fraud.
+- **Data augmentation:** Using both SMOTE and generative synthetic data.
+- **Modeling:** Benchmarking Random Forest, XGBoost, Logistic Regression, and an MLP.
+- **Evaluation:** Precision, recall, F1, ROC-AUC, and domain-aware discussion.
 
 ## Dataset
-[Kaggle European credit card transactions](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud), anonymized for privacy. Highly imbalanced (284,807 transactions; 492 fraud).
 
-## Key Results
-- **Best model: Random Forest (Resampled with SMOTE)** (scoring F1 = 0.8705, Precision = 0.8842, Recall = 0.8571, and Accuracy = 0.9996.
-  This model provides the strongest balance between correctly identifying fraud and minimizing false positives, outperforming other tested approaches in this highly imbalanced dataset.)
-- Feature importance analysis revealed that several principal components, including V17, V14, and V12, were the most influential predictors, although individual features are anonymized due to PCA transformation.
-- The model achieved a high accuracy of 99.96%, while ROC AUC and PR AUC metrics demonstrate strong discriminatory power in identifying fraudulent transactions in this highly imbalanced dataset.
-- Feature engineering proactively removed redundant and low-importance features, reducing the data to 20 key components without impacting model performance, improving training efficiency and model clarity.
+- Uses the **Kaggle credit card fraud dataset** (`creditcard.csv`), featuring engineered PCA components (V1–V28), plus transaction time and amount.
 
-## Business Impact
-By employing SMOTE to effectively balance highly imbalanced fraud datasets, this project demonstrates that traditional machine learning models such as Random Forest can achieve fraud detection performance comparable to complex deep learning models like neural networks. For financial institutions and insurers, this represents a cost-saving advantage by reducing the need for expensive computational infrastructure, lengthy model tuning, and specialized skillsets required for neural networks. It also allows the model to be more explainable and transparent. These efficiencies accelerate deployment timelines and reduce operational overhead while maintaining robust detection accuracy, ultimately helping organizations minimize fraud losses, optimize investigation workflows, and comply with stringent regulatory standards more efficiently.
+## Workflow
+
+1. **EDA:** Plots/analysis reveal extreme class imbalance, feature skewness, and weak simple correlations — motivating log transformation and custom scaling.
+2. **Preprocessing:**
+    - **Feature Scaling:** RobustScaler
+    - **Amount Transformation:** Log (for stability and interpretability)
+    - **Class Balancing:** (1) SMOTE oversampling; (2) SDV synthetic data
+3. **Model Training:**
+    - Models compared on original and augmented data
+    - Cross-validated hyperparameter tuning
+    - Deep learning baseline (MLP)
+4. **Evaluation:**
+    - Detailed metrics: precision, recall, F1, ROC-AUC
+    - ROC curve visualization for all models and setups
+
+## Key Findings
+
+- **SMOTE/synthetic data** dramatically improve recall (fewer missed frauds), especially for Logistic Regression and XGBoost.
+- **Precision drops** for some models, increasing false positives—but this often aligns with business priorities in fraud prevention.
+- **Random Forest & MLP** achieve a better balance of recall/precision for automated systems.
+- **Feature engineering (log-amount), robust scaling, and more domain features are essential.**
+
+## Domain-Specific Insights
+
+- **Recall > Precision** for fraud: Missing fraud cases is riskier than investigating extra cases.
+- **Threshold tuning and cost-sensitive evaluation** are critical in real production deployments.
 
 ## Next Steps
-- Try insurance/open banking datasets
-- Integrate explainability tools (SHAP)
-- Simulate cost/benefit of thresholds
 
-*Full [notebook]((https://github.com/cyfangus/fraud_detection_supervised_learning/blob/main/fraud_detection_supervised_learning.ipynb)) and summary PDF inside this repo.*
+- **Tune class weighting and thresholds** to further balance false alarms vs missed fraud.
+- **Add domain-relevant features** (velocity, merchant types, etc.).
+- **Stratified cross-validation** and more robust evaluation metrics (PR-AUC, cost-based loss).
+- **Model explainability (SHAP, LIME)** for analyst support.
 
-![output](https://github.com/user-attachments/assets/0114c055-37ae-4532-89fc-a8eb2513c833)
+## Conclusion
+
+**Synthetic oversampling using SMOTE and generative AI significantly improves the minority class detection in classical machine learning models, narrowing the gap with deep learning methods—and proving essential for practical, scalable fraud prevention in imbalanced datasets.**
+
+---
+
+## Getting Started
+
+1. Clone repo & install requirements:
+
+```bash
+git clone https://github.com/cyfangus/fraud_detection_supervised_learning.git
+cd fraud_detection_supervised_learning
+pip install -r requirements.txt
+```
+
+2. Run **FraudDetection.ipynb** in Jupyter or VSCode.
+
+## Dependencies
+
+- numpy, pandas, matplotlib, seaborn
+- scikit-learn, imbalanced-learn (SMOTE)
+- sdv (synthetic data generation)
+- xgboost
+- tensorflow (for deep learning/MLP)
+
+## License
+
+See LICENSE file in the repo.
+
+
+
 
