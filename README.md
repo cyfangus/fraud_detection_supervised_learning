@@ -22,7 +22,7 @@ This project investigates whether **traditional machine learning algorithms** en
     - **Class Balancing:** (1) SMOTE oversampling; (2) SDV synthetic data
 3. **Model Training:**
     - Models compared on original and augmented data
-    - Cross-validated hyperparameter tuning
+    - Random Forest, XGBoost, Logistic Regression (top 3 models used in fraud detection according to [Chen et al. (2025)](https://www.sciencedirect.com/science/article/pii/S2666764925000372?ref=pdf_download&fr=RR-2&rr=989454db9d666553)
     - Deep learning baseline (MLP)
 4. **Evaluation:**
     - Detailed metrics: precision, recall, F1, ROC-AUC
