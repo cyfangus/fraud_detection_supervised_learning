@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project investigates whether **traditional machine learning algorithms** enhanced with **data augmentation** (SMOTE and generative synthetic data via SDV) can rival deeper models for fraud detection. It focuses on:
+This project investigates whether **traditional machine learning algorithms** enhanced with **data augmentation**, using Synthetic Minority Over-sampling Technique (SMOTE) and generative synthetic data via SDV. can rival deeper models for fraud detection. It focuses on:
 
 - **Imbalanced classification:** Real-world credit card fraud.
 - **Data augmentation:** Using both SMOTE and generative synthetic data.
